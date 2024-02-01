@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:weather_clean_architecture_tdd/domain/entities/weather.dart';
 import 'package:weather_clean_architecture_tdd/presentation/bloc/weather_bloc.dart';
 import 'package:weather_clean_architecture_tdd/presentation/bloc/weather_event.dart';
 import 'package:weather_clean_architecture_tdd/presentation/bloc/weather_state.dart';
@@ -30,16 +29,6 @@ void main() {
       ),
     );
   }
-
-  const testWeather = WeatherEntity(
-    cityName: 'New York',
-    main: 'Clouds',
-    description: 'few clouds',
-    iconCode: '02d',
-    temperature: 302.28,
-    pressure: 1009,
-    humidity: 70,
-  );
 
   testWidgets(
     'text field should trigger state to change from empty to loading',
